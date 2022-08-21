@@ -1,0 +1,61 @@
+<div class="login-page">
+    <mat-card class="mat-elevation-z12">
+ 
+     
+      <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+        <mat-tab label="Calculator">
+            <mat-card-content>
+              <form >
+                <div class="x1">
+                    <mat-form-field appearance="outline">
+                        <input matInput required [(ngModel)]="Input1" [ngModelOptions]="{standalone: true}">
+                      </mat-form-field>
+                      <mat-form-field appearance="outline">
+                        <input matInput required [(ngModel)]="Input2" [ngModelOptions]="{standalone: true}">
+                      </mat-form-field>
+                </div>
+                
+
+                <div class="xx">
+
+                    <div>
+                        <mat-form-field appearance="outline">
+                            <!-- <mat-label>Color</mat-label> -->
+                            <mat-select [formControl]="optionControl">
+                              <mat-option value="0">Select</mat-option>
+                              <mat-option value="1">add</mat-option>
+                              <mat-option value="2">subtract</mat-option>
+                              <mat-option value="3">multiply</mat-option>
+                              <mat-option value="4">divide</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div style="margin-left:10px ; padding-top: 10px;">
+                        <button
+                        mat-raised-button
+                        type="submit"
+                        color="primary"
+                        (click)="Calculate()"
+                       >
+                        Calculate
+                      </button>
+                    </div>
+                </div>
+              
+               
+                </form>
+            </mat-card-content>
+        </mat-tab>
+  
+
+      </mat-tab-group>
+    </mat-card>
+  </div>
+<!--   
+  <ngx-spinner
+  bgColor="rbga(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple">
+  
+  </ngx-spinner> -->
