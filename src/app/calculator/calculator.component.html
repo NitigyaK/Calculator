@@ -8,10 +8,10 @@
               <form >
                 <div class="x1">
                     <mat-form-field appearance="outline">
-                        <input matInput required [(ngModel)]="Input1" [ngModelOptions]="{standalone: true}">
+                        <input matInput placeholder="Input Number" required [(ngModel)]="Input1" [ngModelOptions]="{standalone: true}">
                       </mat-form-field>
                       <mat-form-field appearance="outline">
-                        <input matInput required [(ngModel)]="Input2" [ngModelOptions]="{standalone: true}">
+                        <input matInput placeholder="Input Number" required [(ngModel)]="Input2" [ngModelOptions]="{standalone: true}">
                       </mat-form-field>
                 </div>
                 
@@ -49,6 +49,8 @@
   
 
       </mat-tab-group>
+
+      <h1 style="margin-left: 35%;" class="text-center">Result : {{showValue}}</h1>
     </mat-card>
   </div>
 <!--   

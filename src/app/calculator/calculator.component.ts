@@ -10,6 +10,7 @@ export class CalculatorComponent implements OnInit {
   optionControl = new FormControl('0');
   Input1:any;
   Input2:any;
+  showValue:any;
     constructor(private _formBuilder: FormBuilder, private calc:CalculatorService) { 
    
   }
@@ -28,6 +29,7 @@ export class CalculatorComponent implements OnInit {
       {
         next:(data)=>
         {
+          this.showValue = data;
             console.log(data)
         }, 
         error:(error)=>
